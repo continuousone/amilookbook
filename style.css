@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+}
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 120px;
+}
+
+/* .products {
+    /* padding: 2em;
+
+} */
+ #ami-logo{
+    width: 175px;
+    padding: 2em 2em;
+    align-items: center;
+ }
+ #tc-logo {
+    color: white;
+    font-weight: 400;
+    padding: 1em;
+ }
+
+.product-card{
+    width: 100%;
+    /* max-width: 1920px; */
+    min-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.product-card img{
+    width: 100%;
+}
+
+.product-info {
+    padding: 2em 2em;
+}
+
+.product-image {
+    position: relative;
+
+}
+
+.hotspot {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.hotspot::before {
+    background-color: inherit;
+    border-radius: inherit;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    animation: pulse 2s linear infinite;
+    pointer-events: none;
+}
+/* Hotspot Colors */
+.product-card:nth-child(1) .hotspot {
+    background-color: #EFBF04;
+    /* background-color: #ffd700; */
+}
+
+.product-card:nth-child(2) .hotspot {
+    background-color: #71d9ff;
+}
+
+.product-card:nth-child(3) .hotspot {
+    background-color: #ff7272;
+}
+
+/* Hotspot positions */
+/* First Card */
+.product-card:nth-child(1) .h-1 {
+    left: 28%;
+    top: 75%;
+    z-index: 100;
+}
+
+.product-card:nth-child(1) .h-2 {
+    left: 37%;
+    top: 57%;
+    z-index: 2;
+}
+
+.product-card:nth-child(1) .h-3 {
+    left: 82%;
+    top: 60%;
+    z-index: 5;
+}
+
+.product-card:nth-child(1) .h-4 {
+    left: 55%;
+    top: 67%;
+    z-index: 5;
+}
+
+.product-card:nth-child(1) .h-5 {
+    left: 28%;
+    top: 57%;
+    z-index: 10;
+}
+
+.tooltip {
+    position:absolute;
+    top: -5em;
+    left: 50%;
+    width: 250px;
+    transform: translateX(-50%);
+    background-color: white;
+    color: #000;
+    min-width: 5em;
+    /* max-width: 200px; */
+    /* border-radius: 5px; */
+    transition: 200ms;
+    pointer-events: none;
+    padding: 0;
+}
+
+.tooltip img {
+    margin: 0;
+    padding: 0;
+}
+
+.tooltip h3 {
+    padding: 0.5em 1em;
+    text-align: left;
+    background-color: white;
+    margin: 0;
+    /* border-radius: 5px 5px 0 0; */
+}
+
+.tooltip h4 {
+    font-size: 1.25em;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    margin-top: 0;
+}
+.tooltip p {
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+}
+
+.tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translate(-50%);
+    width: 0;
+    height: 0;
+    border-left: 0.5 em solid transparent;
+    border-right: 0.5 em solid transparent;
+    border-top: 1em solid #f0f0f0;
+
+}
+.tooltip {opacity: 0;}
+
+.hotspot:hover .tooltip, .tooltip-show {
+    top: -7em;
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    50% {
+        width: 300%;
+        height: 300%;
+        opacity: 0.5;
+    }
+    /* 75% {
+    width: 500%;
+    height: 500%;
+    opacity: 0.75;
+    } */
+
+    100% {
+        opacity: 0;
+    }
+}
